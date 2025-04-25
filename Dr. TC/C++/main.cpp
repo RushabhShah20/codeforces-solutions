@@ -1,5 +1,5 @@
 // Problem: Dr. TC
-// Link to the problem: https://codeforces.com/contest/2103/problem/A
+// Link to the problem: https://codeforces.com/contest/2106/problem/A
 #include <bits/stdc++.h>
 #define ll long long int
 #define ull unsigned long long int
