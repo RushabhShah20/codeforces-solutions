@@ -1,0 +1,32 @@
+// Problem: Shizuku Hoshikawa and Farm Legs
+// Link to the problem: https://codeforces.com/contest/2171/problem/A
+#include <bits/stdc++.h>
+#define ll long long int
+using namespace std;
+
+void solve()
+{
+    ll n;
+    cin >> n;
+    if (n % 2 == 0)
+    {
+        cout << ((n / 4) + 1) << endl;
+    }
+    else
+    {
+        cout << 0 << endl;
+    }
+}
+
+int main()
+{
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
+    ll t;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+    }
+    return 0;
+}
