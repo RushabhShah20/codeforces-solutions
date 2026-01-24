@@ -40,7 +40,7 @@ void solve()
             else
             {
                 cout << (((n - 3) / 2) + 1) << endl;
-                for (ll i = 0; i < (((n - 3) / 2) + 1); i++)
+                for (ll i = 0; i < (((n - 3) / 2)); i++)
                 {
                     cout << 2 << " ";
                 }
