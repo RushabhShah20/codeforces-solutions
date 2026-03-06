@@ -1,0 +1,49 @@
+// Problem: New Year Table
+// Link to the problem: https://codeforces.com/contest/140/problem/A
+#include <bits/stdc++.h>
+#define ll long long int
+#define ull unsigned long long int
+using namespace std;
+
+void solve()
+{
+    ll n, R, r;
+    cin >> n >> R >> r;
+    if (r > R)
+    {
+        cout << "NO" << endl;
+        return;
+    }
+    if (n == 1)
+    {
+        if (r <= R)
+        {
+            cout << "YES" << endl;
+        }
+        else
+        {
+            cout << "NO" << endl;
+        }
+        return;
+    }
+    const long double PI = acosl(-1.0);
+    if (r <= (R - r) * sin(PI / n) + 1e-9)
+    {
+        cout << "YES" << endl;
+    }
+    else
+    {
+        cout << "NO" << endl;
+    }
+}
+
+int main()
+{
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    solve();
+    return 0;
+}
