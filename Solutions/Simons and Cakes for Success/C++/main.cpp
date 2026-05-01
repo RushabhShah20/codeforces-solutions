@@ -1,0 +1,68 @@
+// Problem: Simons and Cakes for Success
+// Link to the problem: https://codeforces.com/contest/2205/problem/B
+#include <bits/stdc++.h>
+#define ll long long int
+#define ull unsigned long long int
+using namespace std;
+
+void solve(const vector<ll> &primes)
+{
+    ll n;
+    cin >> n;
+    ll ans = 1;
+    for (const ll prime : primes)
+    {
+        bool x = false;
+        while (n % prime == 0)
+        {
+            x = true;
+            n /= prime;
+        }
+        if (x)
+        {
+            ans *= prime;
+        }
+    }
+    if (n > 1)
+    {
+        ans *= n;
+    }
+    cout << ans << endl;
+}
+
+int main()
+{
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    vector<bool> isPrime(100001, true);
+    isPrime[0] = isPrime[1] = false;
+    for (ll i = 2; i * i <= 100000; i++)
+    {
+        if (isPrime[i])
+        {
+            for (ll j = i * i; j <= 100000; j += i)
+            {
+                isPrime[j] = false;
+            }
+        }
+    }
+    vector<ll> primes;
+    primes.push_back(2);
+    for (ll i = 3; i <= 100000; i += 2)
+    {
+        if (isPrime[i])
+        {
+            primes.push_back(i);
+        }
+    }
+    ll t;
+    cin >> t;
+    while (t--)
+    {
+        solve(primes);
+    }
+    return 0;
+}
