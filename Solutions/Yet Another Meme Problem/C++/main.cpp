@@ -1,0 +1,36 @@
+// Problem: Yet Another Meme Problem
+// Link to the problem: https://codeforces.com/contest/1288/problem/B
+#include <bits/stdc++.h>
+#define ll long long int
+#define ull unsigned long long int
+using namespace std;
+
+void solve()
+{
+    ll a, b;
+    cin >> a >> b;
+    ll x = 0, y = 9;
+    while (y <= b)
+    {
+        x++;
+        y = 10 * y + 9;
+    }
+    const ll ans = a * x;
+    cout << ans << endl;
+}
+
+int main()
+{
+    // freopen("input.txt", "r", stdin);
+    // freopen("output.txt", "w", stdout);
+    ios_base::sync_with_stdio(false);
+    cin.tie(nullptr);
+    cout.tie(nullptr);
+    ll t;
+    cin >> t;
+    while (t--)
+    {
+        solve();
+    }
+    return 0;
+}
